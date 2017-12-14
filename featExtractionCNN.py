@@ -1,3 +1,5 @@
+from __future__ import print_function
+from __future__ import division
 import glob
 import os
 import numpy as np
@@ -5,15 +7,16 @@ import librosa
 import cfg
 
 
-n_mfcc = 14
-window_size = 44100
-hop_length=512
-# Unique index for every class
+# Unique index for every class/label
 classes = {"string": 0, "keyboard": 1, "vocal": 2, "guitar": 3, "brass": 4}
-train_dir = "nsynth-train"
-valid_dir = "nsynth-valid"
-save_dir = "."
-datafile = "dataCNN.npz"
+train_dir = "nsynth-train" # Directory to your training set 
+valid_dir = "nsynth-valid" # Directory to your test set
+datafile = "./dataCNN.npz" # What to save the numpy arrays as
+
+n_mfcc = 14 
+window_size = 88200 # Corresponds to 4 seconds of audio if the sampling rate is 22050
+hop_length = 512
+
 
 def windows(data):
     start = 0
@@ -46,7 +49,7 @@ def compile_all_data():
     tr_features, tr_labels = process_raw_data(train_dir)
     ts_features, ts_labels = process_raw_data(valid_dir)
 
-    np.savez(os.path.join(save_dir, datafile), 
+    np.savez(datafile,
              tr_features=tr_features, tr_labels=tr_labels,
              ts_features=ts_features, ts_labels=ts_labels)
 
