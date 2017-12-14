@@ -1,4 +1,7 @@
 # music-classification-using-knn-cnn
+## Dataset
+The Nsynth Dataset we used can be obtained [here](https://magenta.tensorflow.org/datasets/nsynth). We processed a subset of this dataset for use in our training. Due to the large size of the file (> 1GB), we could not put it up here. But we've included few samples of files in [eg/tr](eg/tr) and [eg/ts](eg/ts).
+
 ## CNN Usage
 
 Prepare two directory containing your training set and validation set, respectively. Your dataset which should be a set of `*.wav` files.
@@ -25,6 +28,12 @@ To train a new model, run
 python3 --train [data.npz]
 ```
 
+## KNN Usage
+
+Generate a `.npz` from the dataset, as described above.  Then, run the kNN.
+
+python knn_categorizer.py
+```
 
 ## Dependencies
 The CNN model works with python 2 or 3.
