@@ -22,7 +22,7 @@ python3 --test eg/weightsCNN.hdf5 [data.npz]
 ```
 To train a new model, run
 ```
-python3 --train [data.npz
+python3 --train [data.npz]
 ```
 
 
