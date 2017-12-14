@@ -33,7 +33,7 @@ python3 --train [data.npz]
 Generate a `.npz` from the dataset, as described above.  Then, run the kNN.
 ```
 python knn_categorizer.py
-
+```
 
 ## Dependencies
 The CNN model works with python 2 or 3.
