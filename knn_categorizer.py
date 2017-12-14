@@ -4,8 +4,8 @@ from sklearn.neighbors import NearestNeighbors
 
 from collections import Counter
 
-
-points = np.load("data40.npz")
+filename = raw_input('Dataset (.npz): ')
+points = np.load(filename)
 
 training_features = points['tr_features']
 training_labels = points['tr_labels']

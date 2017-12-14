@@ -25,6 +25,12 @@ To train a new model, run
 python3 --train [data.npz]
 ```
 
+## KNN Usage
+
+Generate a `.npz` from the dataset, as described above.  Then, run the kNN.
+
+python knn_categorizer.py
+```
 
 ## Dependencies
 The CNN model works with python 2 or 3.
