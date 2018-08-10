@@ -1,4 +1,9 @@
 # music-classification-using-knn-cnn
+## Report and Presentation
+For detailed project report and write up, please check [this file](music-classification-using-knn-cnn-report.pdf).
+
+For a abstract overview of our project, please refer to our [slides](https://docs.google.com/presentation/d/1Zt8KGg0PVwtuc5_7TKHfrMUbzMaW1T4H1juTLiXYQNw/edit?usp=sharing).
+
 ## Dataset
 The Nsynth Dataset we used can be obtained [here](https://magenta.tensorflow.org/datasets/nsynth). We processed a subset of this dataset for use in our training. Due to the large size of the file (> 1GB), we could not put it up here. But we've included few samples of files in [eg/tr](eg/tr) and [eg/ts](eg/ts).
 
